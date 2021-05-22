@@ -1,0 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@500&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: 'KoHo', sans-serif;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    height: 90vh;
+
+    &__left {
+        grid-column: 1 / 11;
+        justify-self: center;
+        align-self: center;
+        font-size: 2rem;
+    }
+    &__right {
+        grid-column: 11 / -1;
+        justify-self: center;
+        align-self: center;
+
+
+    }
+}
