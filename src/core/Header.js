@@ -13,7 +13,7 @@ const Header = () => {
 
             <div className="header__links">
                 <ul className="header__links__linkgroup">
-                    <li><Link to="/">Guess It!</Link></li>
+                    <li><Link to="/numbers">Numbers</Link></li>
                 </ul>
             </div>
         </div>

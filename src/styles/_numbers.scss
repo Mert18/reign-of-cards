@@ -1,0 +1,62 @@
+
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+
+    &__hero {
+        grid-column: 6 / 19;
+        font-size: 1.6rem;
+        text-align: center;
+        padding: 2rem;
+    }
+    &__games {
+        grid-column: 2 / 23;
+        font-size: 1rem;
+        color: white;
+    }
+}
+
+.gameone {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+
+    &__title {
+        grid-column: 1 / -1;
+        background-color: black;
+        padding: 2rem;
+        position: relative;
+        h4{
+            text-align: center;
+            padding-top: 2rem;
+        }
+        h3 {
+            position: absolute;
+            top: -30px;
+            left: 10px;
+            color: white;
+            background-color: black;
+            padding: 1rem;
+        }
+    }
+
+    &__game {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(24, 1fr);
+        &__left {
+            grid-column: 1 / 14;
+            border: 2px solid black;
+            color: black;
+
+            .operation {
+                text-align: center;
+                padding: 1.5rem;
+                font-size: 1.6rem;
+            }
+        }
+        &__right {
+            grid-column: 14 / -1;
+            border: 2px solid black;
+        }
+    }
+}

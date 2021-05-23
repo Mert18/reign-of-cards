@@ -4,14 +4,14 @@ import ReactCardFlip from 'react-card-flip';
 
 const Card = ({img, title}) => {
 
-    const [flipped, setFlipped] = useState(false);
+    const [flipped, setFlipped] = useState(true);
 
 
-   /*  useEffect(() => {
+   useEffect(() => {
         setTimeout(() => {
             setFlipped(!flipped);
-        }, 2000)
-    }) */
+        }, 4000)
+    }) 
     
     const Front = () => (
         <Fragment>
