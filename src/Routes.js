@@ -6,12 +6,12 @@ import Numbers from './components/screens/Numbers';
 
 const Routes = () => {
     return (
-        <BrowserRouter>
-            <Switch>
-                <Route path="/" exact component={App} />
-                <Route path="/numbers" component={Numbers} />
-            </Switch>
-        </BrowserRouter>
+            <BrowserRouter>
+                <Switch>
+                    <Route path="/" exact component={App} />
+                    <Route path="/numbers" component={Numbers} />
+                </Switch>
+            </BrowserRouter>
     )
 }
 

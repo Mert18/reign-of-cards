@@ -57,6 +57,11 @@
         &__right {
             grid-column: 14 / -1;
             border: 2px solid black;
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: .5rem;
         }
     }
 }

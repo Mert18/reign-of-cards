@@ -4,10 +4,8 @@
 }
 
 .front {
- 
     border: 2px solid black;
-    width: 15rem;
-    
+    width: 9rem;
     &__img{
         img {
             display: block;
@@ -17,17 +15,9 @@
             -webkit-user-drag: none;
         }
     }
-    &__txt {
-        position: absolute;
-        top: 90%;
-        left: 73%;
-        transform: translateX(-50%);
-        font-size: .8rem;
-        width: 100%;
-    }
 }
 .back {
-    width: 15rem;
+    width: 9rem;
     border: 2px solid black;
     display: flex;
     justify-content: center;
