@@ -3,16 +3,11 @@
     display: grid;
     grid-template-columns: repeat(24, 1fr);
 
-    &__hero {
-        grid-column: 6 / 19;
-        font-size: 1.6rem;
-        text-align: center;
-        padding: 2rem;
-    }
     &__games {
         grid-column: 2 / 23;
         font-size: 1rem;
         color: white;
+        margin-top: 4rem;
     }
 }
 
@@ -63,5 +58,13 @@
             flex-wrap: wrap;
             padding: .5rem;
         }
+    }
+}
+
+.answer {
+    &__boxes {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 }
