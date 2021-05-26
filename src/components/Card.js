@@ -15,7 +15,7 @@ const Card = ({img, title}) => {
     )
     const Back = () => (
         <Fragment>
-            <img src="/images/cards/quest.svg" alt="question mark" />
+            <img src="/images/cards/card-back.svg" alt="question mark" />
         </Fragment>
     )
 

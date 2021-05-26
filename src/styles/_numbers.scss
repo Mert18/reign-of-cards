@@ -17,20 +17,16 @@
 
     &__title {
         grid-column: 1 / -1;
-        background-color: black;
         padding: 2rem;
         position: relative;
+        color: black;
         h4{
             text-align: center;
             padding-top: 2rem;
-        }
-        h3 {
-            position: absolute;
-            top: -30px;
-            left: 10px;
-            color: white;
-            background-color: black;
-            padding: 1rem;
+            &:hover{
+                cursor: pointer;
+                color: pink;
+            }
         }
     }
 
@@ -38,9 +34,9 @@
         grid-column: 1 / -1;
         display: grid;
         grid-template-columns: repeat(24, 1fr);
+        margin-bottom: 4rem;
         &__left {
-            grid-column: 1 / 14;
-            border: 2px solid black;
+            grid-column: 1 / 13;
             color: black;
 
             .operation {
@@ -50,13 +46,15 @@
             }
         }
         &__right {
-            grid-column: 14 / -1;
-            border: 2px solid black;
+            grid-column: 13 / -1;
 
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: .5rem;
+            
+            &__cards {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: .5rem;
+            }
         }
     }
 }
@@ -67,4 +65,22 @@
         justify-content: space-around;
         align-items: center;
     }
+    &__message {
+        text-align: center;
+        padding: 2rem;
+    }
+}
+
+.difficulty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h4 {
+        margin: 1rem;
+    }
+}
+
+
+.active {
+    color: red;
 }

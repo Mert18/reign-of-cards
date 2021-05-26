@@ -1,11 +1,7 @@
 
-.card {
-    
-}
-
 .front {
     border: 2px solid black;
-    width: 9rem;
+    width: 7rem;
     &__img{
         img {
             display: block;
@@ -17,7 +13,7 @@
     }
 }
 .back {
-    width: 9rem;
+    width: 7rem;
     border: 2px solid black;
     display: flex;
     justify-content: center;
