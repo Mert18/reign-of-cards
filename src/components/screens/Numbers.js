@@ -50,16 +50,22 @@ const Numbers = React.memo(() => {
         if(difficulty === "easy"){
             setFirst(Math.trunc(Math.random() *6 + 1) * 5);
             setSecond(Math.trunc(Math.random() * 12));
+
+            setTimeout(() => { setFlipped(false)}, 1000)
+            setTimeout(() => { setFlipped(true) }, 5000);
         } else if(difficulty === "medium"){
             setFirst(Math.trunc(Math.random() * 30 + 10));
             setSecond(Math.trunc(Math.random() * 10 +7));
+            setTimeout(() => { setFlipped(false)}, 1000)
+            setTimeout(() => { setFlipped(true) }, 6000);
         } else if(difficulty === "hard"){
             setFirst(Math.trunc(Math.random() * 40 + 10));
             setSecond(Math.trunc(Math.random() * 20 +10));
+            setTimeout(() => { setFlipped(false)}, 1000)
+            setTimeout(() => { setFlipped(true) }, 7000);
         }
         
-        setTimeout(() => { setFlipped(false)}, 1000)
-        setTimeout(() => { setFlipped(true) }, 4000);
+        
     }
 
     return (
