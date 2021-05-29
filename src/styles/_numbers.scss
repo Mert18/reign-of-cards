@@ -6,7 +6,6 @@
     &__games {
         grid-column: 2 / 23;
         font-size: 1rem;
-        color: white;
         margin-top: 4rem;
     }
 }
@@ -82,5 +81,5 @@
 
 
 .active {
-    color: red;
+    color: $quaternary-color;
 }

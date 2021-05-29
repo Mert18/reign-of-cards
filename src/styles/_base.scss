@@ -1,6 +1,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=KoHo:wght@500&display=swap');
 
+$primary-color: #0A122A;
+$secondary-color: #698F3F;
+$tertiary-color: #804E49;
+$quaternary-color: #E7DECD;
+
+$quinary-color: #73E2A7;
+$senary-color: #73E2A7;
+
+$base-color: #FBFAF8;
+
 *,
 *::before,
 *::after {
@@ -18,28 +28,56 @@ a {
 body {
     font-size: 62.5%;
     font-family: 'KoHo', sans-serif;
-    background-color: #E7E7E7;
+    background-color: $secondary-color;
 }
 
 .main {
     display: grid;
     grid-template-columns: repeat(24, 1fr);
-    height: 90vh;
-
-    &__left {
-        grid-column: 3 / 11;
+    &__welcome {
+        grid-column: 1 / -1;
         justify-self: center;
-        align-self: center;
+        align-self: flex-start;
+        margin-top: 4rem;
         font-size: 2rem;
+        color: $primary-color;
         &__colorized {
             transition: all .7s;
         }
     }
-    &__right {
-        grid-column: 11 / -1;
-        justify-self: center;
-        align-self: center;
 
+    &__games {
+        display: grid;
+        grid-column: 3 / 22;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 2rem;
+        &__game {
+            width: 20rem;
+            justify-self: center;
+            margin: 2rem;
+            &__title {
+                text-align: center;
+                padding: .8rem;
+                background-color: $base-color;
+            }
+            &__img img {
+                display: block;
+                max-width: 100%;
+            }
+        }
+    }
+}
 
+@media (max-width: 1200px) {
+    .main__games {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 866px) {
+    .main__games {
+        grid-template-columns: 1fr;
+    }
+    .main__welcome {
+        font-size: 1.2rem;
     }
 }

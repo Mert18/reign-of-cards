@@ -21,20 +21,19 @@ const Numbers = React.memo(() => {
     const [indexThree, setIndexThree] = useState(false);
 
     useEffect(() => {
-        console.log(answers);
         if(parseInt(answers.join("")) === first*second){
             setFlipped(false);
             setMessage("Congratulations!");
             setTimeout(() => {
                 setFlipped(false);
-            }, 3000)
+            }, 4000)
         }
         if(answers.length === 3 && parseInt(answers.join("")) !== first*second){
             setFlipped(false);
             setMessage(`You Failed! Correct answer is ${first*second}`)
             setTimeout(() => {
                 setFlipped(false);
-            }, 3000)
+            }, 4000)
         }
     }, [answers, first, second])
 

@@ -19,12 +19,41 @@ const App = () => {
     return(
         <Layout>
             <div className="main">
-                <div className="main__left">
+                <div className="main__welcome">
                     <div>
                         <h1>Welcome to</h1>
                     </div>
-                    <div style={divStyle} className="main__left__colorized">
+                    <div style={divStyle} className="main__welcome__colorized">
                         <h1>Reign of Cards</h1>
+                    </div>
+                </div>
+
+                <div className="main__games">
+                    <div className="main__games__game">
+                        <div className="main__games__game__title">
+                            <h1>Numbers</h1>
+                        </div>
+                        <div className="main__games__game__img">
+                            <img src="/images/numbrs.jpg" alt="numbers game" />
+                        </div>
+                    </div>
+
+                    <div className="main__games__game">
+                    <div className="main__games__game__title">
+                            <h1>Numbers</h1>
+                        </div>
+                        <div className="main__games__game__img">
+                            <img src="/images/numbrs.jpg" alt="numbers game" />
+                        </div>
+                    </div>
+
+                    <div className="main__games__game">
+                    <div className="main__games__game__title">
+                            <h1>Numbers</h1>
+                        </div>
+                        <div className="main__games__game__img">
+                            <img src="/images/numbrs.jpg" alt="numbers game" />
+                        </div>
                     </div>
                 </div>
             </div>
