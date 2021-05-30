@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Layout from './core/Layout';
 import randomColor from 'randomcolor';
+import {Link} from 'react-router-dom';
 
 const App = () => {
 
@@ -29,31 +30,42 @@ const App = () => {
                 </div>
 
                 <div className="main__games">
-                    <div className="main__games__game">
-                        <div className="main__games__game__title">
+                    <Link to="/numbers">
+                        <div className="game">
+                            <div className="game__title">
+                                <h1>Numbers</h1>
+                            </div>
+                            <div className="game__overlay">
+                                <div className="game__overlay__content">
+                                    <h2>Will you remember the numbers and calculate the operation at the same time?</h2>
+                                </div>
+                            </div>
+                                <img src="/images/numbrs.jpg" alt="numbers game" />
+                        </div>
+                    </Link>
+
+                    <div className="game">
+                    <div className="game__title">
                             <h1>Numbers</h1>
                         </div>
-                        <div className="main__games__game__img">
-                            <img src="/images/numbrs.jpg" alt="numbers game" />
+                        <div className="game__overlay">
+                            <div className="game__overlay__content">
+                                <h1>Coming Soon...</h1>
+                            </div>
                         </div>
+                            <img src="/images/numbrs.jpg" alt="numbers game" />
                     </div>
 
-                    <div className="main__games__game">
-                    <div className="main__games__game__title">
+                    <div className="game">
+                    <div className="game__title">
                             <h1>Numbers</h1>
                         </div>
-                        <div className="main__games__game__img">
-                            <img src="/images/numbrs.jpg" alt="numbers game" />
+                        <div className="game__overlay">
+                            <div className="game__overlay__content">
+                                <h1>Coming Soon...</h1>
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="main__games__game">
-                    <div className="main__games__game__title">
-                            <h1>Numbers</h1>
-                        </div>
-                        <div className="main__games__game__img">
-                            <img src="/images/numbrs.jpg" alt="numbers game" />
-                        </div>
+                        <img src="/images/numbrs.jpg" alt="numbers game" />
                     </div>
                 </div>
             </div>
