@@ -18,13 +18,14 @@
         grid-column: 1 / -1;
         padding: 2rem;
         position: relative;
-        color: black;
+        background-color: $tertiary-color;
+        color: $base-color;
         h4{
             text-align: center;
             padding-top: 2rem;
             &:hover{
                 cursor: pointer;
-                color: pink;
+                color: $quaternary-color;
             }
         }
     }
@@ -36,9 +37,9 @@
         margin-bottom: 4rem;
         &__left {
             grid-column: 1 / 13;
-            color: black;
-
+            color: $tertiary-color;
             .operation {
+
                 text-align: center;
                 padding: 1.5rem;
                 font-size: 1.6rem;

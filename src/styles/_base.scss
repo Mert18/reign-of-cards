@@ -1,15 +1,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=KoHo:wght@500&display=swap');
 
-$primary-color: #0A122A;
-$secondary-color: #698F3F;
-$tertiary-color: #804E49;
+$primary-color: #E63946;
+$secondary-color: #1D3557;
+$tertiary-color: #457B9D;
 $quaternary-color: #E7DECD;
 
 $quinary-color: #73E2A7;
 $senary-color: #73E2A7;
 
-$base-color: #FBFAF8;
+$base-color: #F1FAEE;
 
 *,
 *::before,
@@ -28,7 +28,7 @@ a {
 body {
     font-size: 62.5%;
     font-family: 'KoHo', sans-serif;
-    background-color: $secondary-color;
+    background-color: $base-color;
 }
 
 .main {
@@ -40,7 +40,7 @@ body {
         align-self: flex-start;
         margin-top: 4rem;
         font-size: 2rem;
-        color: $primary-color;
+        color: $tertiary-color;
         &__colorized {
             transition: all .7s;
         }
@@ -49,9 +49,9 @@ body {
     &__games {
         display: grid;
         grid-column: 3 / 22;
-        grid-template-columns: 1fr 1fr 1fr;
         margin-top: 2rem;
-        
+        justify-self: center;
+        align-self: center;
     }
 }
 
@@ -62,7 +62,7 @@ body {
     &__title {
         text-align: center;
         padding: .8rem;
-        color: white;
+        color: $tertiary-color;
     }
     img {
         display: block;
@@ -119,4 +119,4 @@ body {
     .main__welcome {
         font-size: 1.2rem;
     }
-}
+} 

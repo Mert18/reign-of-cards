@@ -26,7 +26,7 @@ const Numbers = React.memo(() => {
             setMessage("Congratulations!");
             setTimeout(() => {
                 setFlipped(false);
-            }, 4000)
+            }, 2000)
         }
         if(answers.length === 3 && parseInt(answers.join("")) !== first*second){
             setFlipped(false);
@@ -49,19 +49,30 @@ const Numbers = React.memo(() => {
         if(difficulty === "easy"){
             setFirst(Math.trunc(Math.random() *8 + 3) * 5);
             setSecond(Math.trunc(Math.random() * 12 +3));
-
-            setTimeout(() => { setFlipped(false)}, 1000)
-            setTimeout(() => { setFlipped(true) }, 5000);
+            if(message !== ""){
+                setTimeout(() => { setFlipped(false)}, 1000);
+            }else{
+                setTimeout(() => { setFlipped(false)}, 1000);
+                setTimeout(() => { setFlipped(true) }, 4000);
+            }
         } else if(difficulty === "medium"){
             setFirst(Math.trunc(Math.random() * 30 + 11));
             setSecond(Math.trunc(Math.random() * 10 +5));
-            setTimeout(() => { setFlipped(false)}, 1000)
-            setTimeout(() => { setFlipped(true) }, 6000);
+            if(message){
+                setTimeout(() => { setFlipped(false)}, 1000);
+            }else{
+                setTimeout(() => { setFlipped(false)}, 1000);
+                setTimeout(() => { setFlipped(true) }, 4000);
+            }
         } else if(difficulty === "hard"){
             setFirst(Math.trunc(Math.random() * 40 + 10));
             setSecond(Math.trunc(Math.random() * 20 +10));
-            setTimeout(() => { setFlipped(false)}, 1000)
-            setTimeout(() => { setFlipped(true) }, 7000);
+            if(message){
+                setTimeout(() => { setFlipped(false)}, 1000);
+            }else{
+                setTimeout(() => { setFlipped(false)}, 1000);
+                setTimeout(() => { setFlipped(true) }, 4000);
+            }
         }
         
         
