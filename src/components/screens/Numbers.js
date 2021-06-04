@@ -81,86 +81,84 @@ const Numbers = React.memo(() => {
     return (
         <ThemeContext.Provider value={{flipped, setFlipped}}>
             <Layout>
-                <div className="numbers">
-                    <div className="numbers__games">
-                        <section className="gameone">
-                            <div className="gameone__title">
-                                <h2>Random arithmetic operation appears on the screen, then the numbers show up but they will be flipped after 2 seconds. You will remember the numbers and put them in the correct order. Good luck!</h2>
-                                <div className="difficulty">
-                                    <h4 className={index ? 'active' : ''} id="easy" onClick={() => {setDifficulty("easy"); setIndex(true); setIndexTwo(false); setIndexThree(false)}}>Easy</h4>
-                                    <h4 className={indexTwo ? 'active' : ''} id="medium" onClick={() => {setDifficulty("medium"); setIndexTwo(true); setIndexThree(false); setIndex(false)}}>Medium</h4>
-                                    <h4 className={indexThree ? 'active' : ''} id="hard" onClick={() => {setDifficulty("hard"); setIndexThree(true); setIndex(false); setIndexTwo(false)}}>Hard</h4>
-                                </div>
-                                <h4 onClick={handleStartGame}>START</h4>
-                                
-                                
+                <div className="game">
+
+                    <div className="game__head">
+                        <div className="game__head__exp">
+                            <p>Random arithmetic operation appears on the screen, then the numbers show up but they will be flipped after 2 seconds. You will remember the numbers and put them in the correct order. Good luck!</p>
+                        </div>
+                        
+                        <div className="difficulty">
+                            <p className={index ? 'active' : ''} id="easy" onClick={() => {setDifficulty("easy"); setIndex(true); setIndexTwo(false); setIndexThree(false)}}>Easy</p>
+                            <p className={indexTwo ? 'active' : ''} id="medium" onClick={() => {setDifficulty("medium"); setIndexTwo(true); setIndexThree(false); setIndex(false)}}>Medium</p>
+                            <p className={indexThree ? 'active' : ''} id="hard" onClick={() => {setDifficulty("hard"); setIndexThree(true); setIndex(false); setIndexTwo(false)}}>Hard</p>
+                        </div>
+                        <div className="start">
+                            <p onClick={handleStartGame}>START</p>
+                        </div>
+                    </div>
+
+
+                    <div className="game__main">
+                        <div className="game__main__left">
+                            <div className="game__main__left__operation">
+                                <p>{first} x {second} ?</p>
                             </div>
-                            <div className="gameone__game">
-                                <div className="gameone__game__left">
-                                    <div className="operation">
-                                        <h2>{first} x {second} ?</h2>
-                                    </div>
-                                    <div className="answer">
 
-                                        <div className="answer__message">
-                                            <h2>{message}</h2>
-                                        </div>
-
-                                        <div className="answer__boxes">
-                                            {answers ? (
-                                                answers.map((el) => (
-                                                <Card img={`/images/numbers/${el}.svg`} title="one of numbers" />
-                                            ))) 
-                                            :
-                                            <div>
-                                                
-                                            </div>
-                                            }
-                                            
-                                            
-                                        </div>
-                                    </div>
+                            <div className="game__main__left__answer">
+                                <div className="game__main__left__answer__message">
+                                    <p>{message}</p>
                                 </div>
-                                
-                                <div className="gameone__game__right">
-                                    {gameState ? <div className="gameone__game__right__cards">
 
-                                        <div onClick={() => setAnswers((answers) => [...answers, numbers[0]])}>
-                                            <Card img={`/images/numbers/${numbers[0]}.svg`} title="one of numbers" />
-                                        </div>
-                                        <div onClick={() => setAnswers((answers) => [...answers, numbers[1]])}>
-                                            <Card img={`/images/numbers/${numbers[1]}.svg`} title="one of numbers" />
-                                        </div>
-                                        <div onClick={() => setAnswers((answers) => [...answers, numbers[2]])}>
-                                            <Card img={`/images/numbers/${numbers[2]}.svg`} title="one of numbers" />
-                                        </div>
-                                        <div onClick={() => setAnswers((answers) => [...answers, numbers[3]])}>
-                                            <Card img={`/images/numbers/${numbers[3]}.svg`} title="one of numbers" />
-                                        </div>
-                                        <div onClick={() => setAnswers((answers) => [...answers, numbers[4]])}>
-                                            <Card img={`/images/numbers/${numbers[4]}.svg`} title="one of numbers" />
-                                        </div>
-                                        <div onClick={() => setAnswers((answers) => [...answers, numbers[5]])}>
-                                            <Card img={`/images/numbers/${numbers[5]}.svg`} title="one of numbers" />
-                                        </div>
-                                        <div onClick={() => setAnswers((answers) => [...answers, numbers[6]])}>
-                                            <Card img={`/images/numbers/${numbers[6]}.svg`} title="one of numbers" />
-                                        </div>
-                                        <div onClick={() => setAnswers((answers) => [...answers, numbers[7]])}>
-                                            <Card img={`/images/numbers/${numbers[7]}.svg`} title="one of numbers" />
-                                        </div>
-                                        <div onClick={() => setAnswers((answers) => [...answers, numbers[8]])}>
-                                            <Card img={`/images/numbers/${numbers[8]}.svg`} title="one of numbers" />
-                                        </div>
-                                        <div onClick={() => setAnswers((answers) => [...answers, numbers[9]])}>
-                                            <Card img={`/images/numbers/${numbers[9]}.svg`} title="one of numbers" />
-                                        </div>
+                                <div className="game__main__left__answer__boxes">
+                                    {answers ? (answers.map((el) => (
+                                        <Card img={`/images/numbers/${el}.svg`} title="one of numbers" />
+                                    ))) 
+                                    :
+                                    <div>
+                                    
+                                    </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                                
+                        <div className="game__main__right">
+                            {gameState ? <div className="game__main__right__cards">
+                                <div onClick={() => setAnswers((answers) => [...answers, numbers[0]])}>
+                                    <Card img={`/images/numbers/${numbers[0]}.svg`} title="one of numbers" />
+                                </div>
+                                <div onClick={() => setAnswers((answers) => [...answers, numbers[1]])}>
+                                    <Card img={`/images/numbers/${numbers[1]}.svg`} title="one of numbers" />
+                                </div>
+                                <div onClick={() => setAnswers((answers) => [...answers, numbers[2]])}>
+                                    <Card img={`/images/numbers/${numbers[2]}.svg`} title="one of numbers" />
+                                </div>
+                                <div onClick={() => setAnswers((answers) => [...answers, numbers[3]])}>
+                                    <Card img={`/images/numbers/${numbers[3]}.svg`} title="one of numbers" />
+                                </div>
+                                <div onClick={() => setAnswers((answers) => [...answers, numbers[4]])}>
+                                    <Card img={`/images/numbers/${numbers[4]}.svg`} title="one of numbers" />
+                                </div>
+                                <div onClick={() => setAnswers((answers) => [...answers, numbers[5]])}>
+                                    <Card img={`/images/numbers/${numbers[5]}.svg`} title="one of numbers" />
+                                </div>
+                                <div onClick={() => setAnswers((answers) => [...answers, numbers[6]])}>
+                                    <Card img={`/images/numbers/${numbers[6]}.svg`} title="one of numbers" />
+                                </div>
+                                <div onClick={() => setAnswers((answers) => [...answers, numbers[7]])}>
+                                    <Card img={`/images/numbers/${numbers[7]}.svg`} title="one of numbers" />
+                                </div>
+                                <div onClick={() => setAnswers((answers) => [...answers, numbers[8]])}>
+                                    <Card img={`/images/numbers/${numbers[8]}.svg`} title="one of numbers" />
+                                </div>
+                                <div onClick={() => setAnswers((answers) => [...answers, numbers[9]])}>
+                                    <Card img={`/images/numbers/${numbers[9]}.svg`} title="one of numbers" />
+                                </div>
                                     </div> : <div></div>}
                                 </div>
                             </div>
-                        </section>
                     </div>
-                </div>
             </Layout>
         </ThemeContext.Provider>
     )

@@ -1,86 +1,76 @@
 
-.numbers {
+
+.game{
     display: grid;
     grid-template-columns: repeat(24, 1fr);
-
-    &__games {
-        grid-column: 2 / 23;
-        font-size: 1rem;
-        margin-top: 4rem;
+    font-size: 1.2rem;
+    &__head{
+        grid-column: 3 / 23;
     }
-}
-
-.gameone {
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-
-    &__title {
-        grid-column: 1 / -1;
+    &__main{
+        grid-column: 3/ 23;
+        display: flex;
         padding: 2rem;
-        position: relative;
-        background-color: $tertiary-color;
-        color: $base-color;
-        h4{
+        &__left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex:1;
             text-align: center;
-            padding-top: 2rem;
-            &:hover{
-                cursor: pointer;
-                color: $quaternary-color;
-            }
-        }
-    }
 
-    &__game {
-        grid-column: 1 / -1;
-        display: grid;
-        grid-template-columns: repeat(24, 1fr);
-        margin-bottom: 4rem;
-        &__left {
-            grid-column: 1 / 13;
-            color: $tertiary-color;
-            .operation {
-
+            &__operation{
                 text-align: center;
-                padding: 1.5rem;
-                font-size: 1.6rem;
+                padding: 2rem;
+                font-size: 1.9rem;
             }
-        }
-        &__right {
-            grid-column: 13 / -1;
+            &__answer{
+                &__message{
+                    text-align: center;
+                    padding: 2rem;
+                }
+                &__boxes{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
 
-            
-            &__cards {
+        }
+        &__right{
+            flex:1;
+            &__cards{
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
-                padding: .5rem;
             }
+           
+        }
+    }
+}
+.difficulty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    p{
+        margin-right: 1rem;
+        &:last-child{
+            margin-right: 0rem;
+        }
+        &:hover{
+            cursor: pointer;
         }
     }
 }
 
-.answer {
-    &__boxes {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    &__message {
-        text-align: center;
-        padding: 2rem;
-    }
+.active{
+    color: red;
 }
-
-.difficulty {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    h4 {
-        margin: 1rem;
+.start{
+    text-align: center;
+    &:hover{
+        cursor: pointer;
+        color: rgb(117, 89, 53);
     }
-}
-
-
-.active {
-    color: $quaternary-color;
 }

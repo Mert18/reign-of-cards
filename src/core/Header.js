@@ -7,7 +7,7 @@ const Header = () => {
         <div className="header">
             <div className="header__title">
                 <div className="header__title__name">
-                    <Link to="/">Reign of Cards</Link>
+                    <Link to="/">Maths and Cards</Link>
                 </div>
             </div>
 
